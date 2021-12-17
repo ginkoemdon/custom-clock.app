@@ -194,6 +194,12 @@ body {
     border: none;
 }
 
+.settings-btn:hover {
+    background-color: transparent;
+    color: black;
+    transition: 0.3s;
+}
+
 
 form {
     flex-direction: column;
@@ -201,6 +207,7 @@ form {
     text-align: start;
     margin: 0;
     padding: 0;
+    top: 12px;
 }
 
 label {
