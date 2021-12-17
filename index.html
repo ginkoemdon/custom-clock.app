@@ -8,8 +8,8 @@
     <title>NASA Clock - Final Assignment</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Space+Mono&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Space+Mono&display=swap" rel="stylesheet">
     <!-- bootstrap link -->
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -21,15 +21,15 @@
 </head>
 
 <body>
-    
-    <!-- NASA IMAGE -->
-   
-    <p id="greetings" class="greeting h3"></p>
 
-    
-    <div id="container">
-        <!-- this is where the clock will appear -->
-    </div>
+    <!-- NASA IMAGE -->
+    <main id="content">
+        <p id="greetings" class="greeting h3"></p>
+        <div id="container">
+            <!-- this is where the clock will appear -->
+        </div>
+        <div id="displayDate" class="date"></div>
+    </main>
 
     <section>
         <!-- this is where the clock will appear -->
@@ -40,16 +40,15 @@
 
 
         <!--  ====== SETTINGS MENU -->
-        <div style="min-height: 120px;">
-            <div class="collapse collapse-horizontal" id="collapseWidthExample">
-                <form class="card card-body" style="width: 25%;">
-                    <h2 class="h4" >Settings</h2>
+        <div class="settings">
+            <div class="collapse " id="collapseWidthExample">
+                <form class="card card-body">
+                    <h3 class="display-6">Settings</h3>
                     <!-- 24 hour setting (en br)-->
                     <div class="form-item">
                         <input type="checkbox" name="24hour" id="24hour">
                         <label for="24hour">24 Hour Time</label>
                     </div>
-
 
                     <!-- Add Contrast -->
                     <div class="form-item">
@@ -57,7 +56,7 @@
                         <label for="contrast">Background Contrast</label>
                     </div>
 
-                    <!-- Add Contrast -->
+                    <!-- Show Seconds-->
                     <div class="form-item">
                         <input type="checkbox" name="seconds" id="seconds">
                         <label for="seconds">Show Seconds</label>
@@ -70,6 +69,38 @@
         </div>
     </section>
     <!-- ====== End of Settinsg  -->
+
+    <div class="more" id="more">
+        <button class="btn btn-light more-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample"
+            aria-expanded="false" aria-controls="collapseExample">
+            MORE
+        </button>
+    
+        <!-- Card -->
+        <div class="collapse more-content" id="collapseExample">
+            <div class="card card-body more-card">
+
+                <div>
+                    <h3 class="card-title">Day of the Week</h3>
+                    <p id="dayOfWeek"></p>
+                </div>
+                <div>
+                    <h3 class="card-title">Day of the Month</h3>
+                    <p id="dayOfMonth"></p>
+                </div>
+                <div>
+                    <h3 class="card-title">Day of the Year</h3>
+                    <p id="dayOfYear"></p>
+                </div>
+                <div>
+                    <h3 class="card-title">Week of the Year</h3>
+                    <p id="weekOfYear"></p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
 
     <!-- bootstrap link -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
